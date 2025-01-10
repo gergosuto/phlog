@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Majors on Gergő&#39;s Phlog</title>
-    <link>https://gergosuto.github.io/phlog/majors/</link>
+    <link>http://localhost:1313/phlog/majors/</link>
     <description>Recent content in Majors on Gergő&#39;s Phlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2025 09:52:16 +0100</lastBuildDate>
-    <atom:link href="https://gergosuto.github.io/phlog/majors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/phlog/majors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>In Orbit</title>
-      <link>https://gergosuto.github.io/phlog/majors/in-orbit/</link>
+      <link>http://localhost:1313/phlog/majors/in-orbit/</link>
       <pubDate>Wed, 08 Jan 2025 09:52:16 +0100</pubDate>
-      <guid>https://gergosuto.github.io/phlog/majors/in-orbit/</guid>
+      <guid>http://localhost:1313/phlog/majors/in-orbit/</guid>
       <description>&lt;p&gt;Content of second album.&lt;/p&gt;</description>
     </item>
     <item>
       <title>What Do You See</title>
-      <link>https://gergosuto.github.io/phlog/majors/what-do-you-see/</link>
+      <link>http://localhost:1313/phlog/majors/what-do-you-see/</link>
       <pubDate>Wed, 07 Jan 2015 15:52:16 +0100</pubDate>
-      <guid>https://gergosuto.github.io/phlog/majors/what-do-you-see/</guid>
+      <guid>http://localhost:1313/phlog/majors/what-do-you-see/</guid>
       <description>&lt;p&gt;Content of first album.&lt;/p&gt;</description>
     </item>
   </channel>
