@@ -1,5 +1,5 @@
 +++
-date = '2025-01-09T20:19:24+01:00'
+date = '2024-06-15T20:19:24+01:00'
 draft = false
 title = "Roof of Amsterdam's central bus station"
 cover = '1.jpeg'

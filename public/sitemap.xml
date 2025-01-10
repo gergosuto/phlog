@@ -2,17 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://gergosuto.github.io/phlog/minors/</loc>
-    <lastmod>2025-01-09T20:19:24+01:00</lastmod>
-  </url><url>
-    <loc>https://gergosuto.github.io/phlog/minors/2024-06-16-adam-roof/</loc>
-    <lastmod>2025-01-09T20:19:24+01:00</lastmod>
-  </url><url>
     <loc>https://gergosuto.github.io/phlog/minors/2024-03-09-luchtsingel/</loc>
     <lastmod>2025-01-09T19:10:12+01:00</lastmod>
   </url><url>
-    <loc>https://gergosuto.github.io/phlog/minors/2024-09-06-cortina/</loc>
-    <lastmod>2025-01-09T19:09:45+01:00</lastmod>
+    <loc>https://gergosuto.github.io/phlog/minors/</loc>
+    <lastmod>2025-01-09T19:10:12+01:00</lastmod>
   </url><url>
     <loc>https://gergosuto.github.io/phlog/minors/2024-02-08-parthenon/</loc>
     <lastmod>2025-01-09T19:09:45+01:00</lastmod>
@@ -20,17 +14,23 @@
     <loc>https://gergosuto.github.io/phlog/</loc>
     <lastmod>2025-01-09T15:49:04+01:00</lastmod>
   </url><url>
-    <loc>https://gergosuto.github.io/phlog/majors/in-orbit/</loc>
-    <lastmod>2025-01-08T09:52:16+01:00</lastmod>
-  </url><url>
-    <loc>https://gergosuto.github.io/phlog/majors/</loc>
-    <lastmod>2025-01-08T09:52:16+01:00</lastmod>
-  </url><url>
     <loc>https://gergosuto.github.io/phlog/minors/2024-11-24-holiday-funkies-2024/</loc>
     <lastmod>2024-11-24T20:19:06+01:00</lastmod>
   </url><url>
+    <loc>https://gergosuto.github.io/phlog/minors/2024-09-06-cortina/</loc>
+    <lastmod>2024-09-06T19:09:45+01:00</lastmod>
+  </url><url>
+    <loc>https://gergosuto.github.io/phlog/minors/2024-06-15-adam-roof/</loc>
+    <lastmod>2024-06-15T20:19:24+01:00</lastmod>
+  </url><url>
     <loc>https://gergosuto.github.io/phlog/minors/2024-02-09-nike-sculpture/</loc>
     <lastmod>2024-02-09T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://gergosuto.github.io/phlog/majors/in-orbit/</loc>
+    <lastmod>2022-09-01T09:52:16+01:00</lastmod>
+  </url><url>
+    <loc>https://gergosuto.github.io/phlog/majors/</loc>
+    <lastmod>2022-09-01T09:52:16+01:00</lastmod>
   </url><url>
     <loc>https://gergosuto.github.io/phlog/majors/what-do-you-see/</loc>
     <lastmod>2015-01-07T15:52:16+01:00</lastmod>

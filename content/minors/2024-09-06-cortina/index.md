@@ -1,5 +1,5 @@
 +++
-date = '2025-01-09T19:09:45+01:00'
+date = '2024-09-06T19:09:45+01:00'
 draft = false
 title = 'Remains of the 1956 Olympic ski jump ramp'
 cover = '1.jpeg'
