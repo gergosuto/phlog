@@ -1,3 +1,4 @@
-baseURL = 'https://gergosuto.github.io/phlog'
+# baseURL = 'https://gergosuto.github.io/phlog'
+baseURL = ''
 languageCode = 'en-us'
 title = "Gergő's Phlog"

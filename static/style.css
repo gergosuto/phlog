@@ -3,7 +3,7 @@ body {
 }
 
 .content {
-  width: 645px;
+  max-width: 645px;
   margin: 0 auto;
 }
 
