@@ -1,5 +1,5 @@
 +++
-date = '2025-01-09T19:09:45+01:00'
+date = '2024-02-08T19:09:45+01:00'
 draft = false
 title = 'The Parthenon in three frames'
 cover = '1.jpeg'
