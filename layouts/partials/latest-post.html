@@ -2,8 +2,10 @@
 {{ with (index $latestPost 0) }}
   <div class="latest-container">
     <div class="latest-thumbnail">
-      {{ $coverImagePath := printf "/%simages/%s" .File.Dir .Params.Cover }}
-      <img src="{{ $coverImagePath }}" alt="" width="250" height="250">
+      {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+      {{ with .Resources.Get $coverImagePath }}
+        <img src="{{ .RelPermalink }}" alt="" width="250" height="250">
+      {{ end }}
     </div>
     <div class="latest-summary">
       <p>{{ .Date | time.Format "2 Jan 2006" }}</p>
