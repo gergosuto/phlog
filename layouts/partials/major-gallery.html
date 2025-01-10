@@ -2,8 +2,10 @@
   {{ range where .Site.RegularPages "Section" "majors" }}
     <div class="slide">
       <div class="slide-image">
-        {{ $coverImagePath := printf "/%simages/%s" .File.Dir .Params.Cover }}
-        <img src="{{ $coverImagePath }}">
+        {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+        {{ with .Resources.Get $coverImagePath }}
+          <img src="{{ .RelPermalink }}">
+        {{ end }}
       </div>
       <h2>{{ .Title }} ({{ .Date.Year }})</h2>
       <div class="slide-nav">

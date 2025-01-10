@@ -1,8 +1,12 @@
 <div class="masonry-gallery">
   {{ range where .Site.RegularPages "Section" "minors" }}
-    {{ $coverImagePath := printf "/%simages/%s" .File.Dir .Params.Cover }}
     <div class="masonry-item">
-      <a href="{{ .RelPermalink }}"><img src="{{ $coverImagePath }}" alt=""></a>
+      <a href="{{ .RelPermalink }}">
+        {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+        {{ with .Resources.Get $coverImagePath }}
+          <img src="{{ .RelPermalink }}" alt="">
+        {{ end }}
+      </a>
     </div>
   {{ end }}
 </div>
