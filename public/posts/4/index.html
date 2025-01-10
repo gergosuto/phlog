@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <title>
+  Roof of Amsterdam&#39;s central bus station &ndash; Gergő&#39;s Phlog
+</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="content">
+      
+  <p>9 Jan 2025</p>
+  <h1>Subject: Roof of Amsterdam&#39;s central bus station</h1>
+  <p>The bus terminal of Amsterdam’s central station is elevated above ground. When coming up on an escalator, my attention is drawn to the terminal’s glass roof. It is covered with an alternating mix of wine-red and mustard coloured tiles. At first, the arrangement seems random, or abstract at best. Only after some observation – made possible by my delayed bus – do (flipped) letters start to take shape: M, A, D, R. While the rest of them disappear in the distance of the platform, I have lived long enough in the Netherlands to figure it out: when viewed from above, such as a landing airplane, the terminal’s roof displays A-M-S-T-E-R-D-A-M.</p>
+<p>This mini-series is my take on the design of bus terminal’s roof.</p>
+<p>Ironically, the first photo captured a passing airplane – thanks Joël for spotting!</p>
+
+  <div class="slideshow-container">
+	
+    <div class="mySlides fade">
+		  <img src="/posts/4/images/DSCF0931.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/4/images/DSCF0933.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/4/images/DSCF0934.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/4/images/DSCF0936.jpg">
+	  </div>
+  
+
+	<div class="thumbnail-row">
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 1 )">
+		    <img src="/posts/4/images/DSCF0931_hu16871239973067077353.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 2 )">
+		    <img src="/posts/4/images/DSCF0933_hu17024476958673174413.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 3 )">
+		    <img src="/posts/4/images/DSCF0934_hu4941662877601916885.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 4 )">
+		    <img src="/posts/4/images/DSCF0936_hu5814514064359554628.jpg">
+		  </div>
+	  
+	</div>
+
+	<style>
+	 
+	.slideshow-container {
+	  position: relative;
+	  margin: auto;
+	  max-width: 100%;
+	}
+	.mySlides {
+	  display: none;
+	}
+	.mySlides img {
+	  vertical-align: middle;
+		margin: 0 auto;
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	 
+	.thumbnail-row {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 15px;
+	}
+	.thumbnail {
+	  cursor: pointer;
+	  margin: 5px;
+	  overflow: hidden;
+	  border: 2px solid transparent;
+	  transition: 0.3s;
+		opacity: 0.6;
+	}
+	.thumbnail:hover {
+	  border: 2px solid #ddd;
+	}
+	.thumbnail img {
+	  display: block;
+	}
+
+	 
+	.thumbnail.active {
+	  border: 2px solid #666;
+		opacity: 1;
+	}
+	</style>
+
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let thumbnails = document.getElementsByClassName("thumbnail");
+
+	  if (n > slides.length) { slideIndex = 1 }
+	  if (n < 1) { slideIndex = slides.length }
+
+	  
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+
+	  
+	  for (i = 0; i < thumbnails.length; i++) {
+	    thumbnails[i].classList.remove("active");
+	  }
+
+	  
+	  slides[slideIndex - 1].style.display = "flex";
+	  thumbnails[slideIndex - 1].classList.add("active");
+	}
+	</script>
+
+
+      
+  <a href="/">Back to Home</a>
+
+    </div>
+  </body>
+</html>

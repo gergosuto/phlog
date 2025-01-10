@@ -1,0 +1,14 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <!-- {{ range .Resources.Match "images/*.jpg" }}
+    <img src="{{ .RelPermalink }}" width="300" height="200" alt="">
+  {{ end }} -->
+  {{ partial "slideshow" . }}
+{{ end }}
+{{ define "footer" }}
+  <a href="/">Back to Home</a>
+{{ end }}

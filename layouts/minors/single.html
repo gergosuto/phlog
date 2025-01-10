@@ -1,0 +1,15 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <div style="display: flex; justify-content: space-between; color: grey;">
+    <p>Gergő Sütő</p>
+    <p>{{ .Date | time.Format "2 Jan 2006" }}</p>
+  </div>
+  <h1>{{ .Title }}</h1>
+  {{ partial "slideshow" . }}
+  {{ .Content }}
+{{ end }}
+{{ define "footer" }}
+  <a class="mechanical-button" href="/">Back to Home</a>
+{{ end }}

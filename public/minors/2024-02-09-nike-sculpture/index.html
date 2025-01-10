@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <title>
+  A sculpture of Nike in sunset &ndash; Gergő&#39;s Phlog
+</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="content">
+      
+  <div style="display: flex; justify-content: space-between; color: grey;">
+    <p>Gergő Sütő</p>
+    <p>9 Feb 2024</p>
+  </div>
+  <h1>A sculpture of Nike in sunset</h1>
+  <div class="slideshow-container">
+	
+    <div class="mySlides fade">
+		  <img src="/minors/2024-02-09-nike-sculpture/images/1.jpeg">
+	  </div>
+  
+
+	<div class="thumbnail-row">
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 1 )">
+		    <img src="/minors/2024-02-09-nike-sculpture/images/1_hu11796155607660904807.jpeg">
+		  </div>
+	  
+	</div>
+
+	<style>
+	 
+	.slideshow-container {
+	  position: relative;
+	  margin: auto;
+	  max-width: 100%;
+	}
+	.mySlides {
+	  display: none;
+	}
+	.mySlides img {
+	  vertical-align: middle;
+		margin: 0 auto;
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	 
+	.thumbnail-row {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 15px;
+	}
+	.thumbnail {
+	  cursor: pointer;
+	  margin: 5px;
+	  overflow: hidden;
+	  border: 2px solid transparent;
+	  transition: 0.3s;
+		opacity: 0.6;
+	}
+	.thumbnail:hover {
+	  border: 2px solid #ddd;
+	}
+	.thumbnail img {
+	  display: block;
+	}
+
+	 
+	.thumbnail.active {
+	  border: 2px solid #666;
+		opacity: 1;
+	}
+	</style>
+
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let thumbnails = document.getElementsByClassName("thumbnail");
+
+	  if (n > slides.length) { slideIndex = 1 }
+	  if (n < 1) { slideIndex = slides.length }
+
+	  
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+
+	  
+	  for (i = 0; i < thumbnails.length; i++) {
+	    thumbnails[i].classList.remove("active");
+	  }
+
+	  
+	  slides[slideIndex - 1].style.display = "flex";
+	  thumbnails[slideIndex - 1].classList.add("active");
+	}
+	</script>
+
+  <p>Nike was goddess of victory in ancient Greece. This sculpture of her was first erected in the Agora of Athens around 425 BC. Originally carved as winged on her back, a typical representation of Nike, she has lost her wings at some point over the millenia. In this photo, I attempted to create an illusion for this irreplacable loss using the light and shadows of the setting sun in Athens.</p>
+
+
+      
+  <a class="mechanical-button" href="/">Back to Home</a>
+
+    </div>
+  </body>
+</html>

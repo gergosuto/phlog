@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <title>
+  Luchtsingel, Rotterdam &ndash; Gergő&#39;s Phlog
+</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="content">
+      
+  <p>9 Jan 2025</p>
+  <h1>Subject: Luchtsingel, Rotterdam</h1>
+  <p>My takes during a walk on the one and only ‘yellow bridge’ of Rotterdam – on a serene and sunny early spring morning.</p>
+<p>For those who don’t know about this remarkable piece of public infrastructure, it’s essentially a octopus-like pedestrian high-way that connects three districts in the center of Rotterdam.</p>
+
+  <div class="slideshow-container">
+	
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8928.JPG">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8929.JPG">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8930.JPG">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8931.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8933.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8936.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8937.JPG">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8938.jpg">
+	  </div>
+  
+    <div class="mySlides fade">
+		  <img src="/posts/second-post/images/DSCF8942.jpg">
+	  </div>
+  
+
+	<div class="thumbnail-row">
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 1 )">
+		    <img src="/posts/second-post/images/DSCF8928_hu433290823683356844.JPG">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 2 )">
+		    <img src="/posts/second-post/images/DSCF8929_hu12131935134032134013.JPG">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 3 )">
+		    <img src="/posts/second-post/images/DSCF8930_hu13492086272929754416.JPG">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 4 )">
+		    <img src="/posts/second-post/images/DSCF8931_hu8792672295337420367.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 5 )">
+		    <img src="/posts/second-post/images/DSCF8933_hu7700813938191262244.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 6 )">
+		    <img src="/posts/second-post/images/DSCF8936_hu8209888618967752195.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 7 )">
+		    <img src="/posts/second-post/images/DSCF8937_hu7842615028432062482.JPG">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 8 )">
+		    <img src="/posts/second-post/images/DSCF8938_hu13837453162669223384.jpg">
+		  </div>
+	  
+			
+		  <div class="thumbnail" onclick="currentSlide( 9 )">
+		    <img src="/posts/second-post/images/DSCF8942_hu5604656041852436980.jpg">
+		  </div>
+	  
+	</div>
+
+	<style>
+	 
+	.slideshow-container {
+	  position: relative;
+	  margin: auto;
+	  max-width: 100%;
+	}
+	.mySlides {
+	  display: none;
+	}
+	.mySlides img {
+	  vertical-align: middle;
+		margin: 0 auto;
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	 
+	.thumbnail-row {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 15px;
+	}
+	.thumbnail {
+	  cursor: pointer;
+	  margin: 5px;
+	  overflow: hidden;
+	  border: 2px solid transparent;
+	  transition: 0.3s;
+		opacity: 0.6;
+	}
+	.thumbnail:hover {
+	  border: 2px solid #ddd;
+	}
+	.thumbnail img {
+	  display: block;
+	}
+
+	 
+	.thumbnail.active {
+	  border: 2px solid #666;
+		opacity: 1;
+	}
+	</style>
+
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let thumbnails = document.getElementsByClassName("thumbnail");
+
+	  if (n > slides.length) { slideIndex = 1 }
+	  if (n < 1) { slideIndex = slides.length }
+
+	  
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+
+	  
+	  for (i = 0; i < thumbnails.length; i++) {
+	    thumbnails[i].classList.remove("active");
+	  }
+
+	  
+	  slides[slideIndex - 1].style.display = "flex";
+	  thumbnails[slideIndex - 1].classList.add("active");
+	}
+	</script>
+
+
+      
+  <a href="/">Back to Home</a>
+
+    </div>
+  </body>
+</html>

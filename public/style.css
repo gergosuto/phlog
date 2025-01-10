@@ -1,0 +1,51 @@
+body {
+  font-family: Ubuntu Mono;
+}
+
+.content {
+  width: 645px;
+  margin: 0 auto;
+}
+
+/* Basic styles for the button */
+.mechanical-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #979797;
+    color: white;
+    font-size: 1em;
+    font-family: Ubuntu Mono;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #595959;;
+    text-align: center;
+    transition: all 0.1s ease-in-out; /* Faster transition for a more immediate feel */
+    box-shadow: 0 5px #444;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+  }
+
+  .mechanical-button.open{
+    background-color: #d42323;
+    border-color: #992e2e;
+    box-shadow: 0 5px #700f0f;
+  }
+
+  /* Hover and Active States (Pressed Effect) */
+  .mechanical-button:hover,
+  .mechanical-button:active {
+    box-shadow: 0 4px #444; /* Less shadow to make it look pressed down */
+    transform: translateY(2px); /* Push it down */
+  }
+
+  .mechanical-button.open:hover,
+  .mechanical-button.open:active {
+    box-shadow: 0 4px #700f0f;
+    transform: translateY(2px);
+  }
+
+  .open {
+    margin: 0 5px;
+  }

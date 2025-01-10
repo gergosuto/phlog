@@ -1,0 +1,25 @@
+<div class="masonry-gallery">
+  {{ range where .Site.RegularPages "Section" "minors" }}
+    {{ $coverImagePath := printf "/%simages/%s" .File.Dir .Params.Cover }}
+    <div class="masonry-item">
+      <a href="{{ .RelPermalink }}"><img src="{{ $coverImagePath }}" alt=""></a>
+    </div>
+  {{ end }}
+</div>
+
+<style media="screen">
+  .masonry-gallery {
+    column-count: 3;
+    column-gap: .5em;
+  }
+  .masonry-item {
+    padding-top: .5em;
+  }
+  .masonry-item img {
+    width: 100%;
+  }
+  .masonry-item a {
+    display: block;
+    font-size: 0;
+  }
+</style>

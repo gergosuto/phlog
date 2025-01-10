@@ -1,0 +1,27 @@
+{{ $latestPost := first 1 (where (sort (where .Site.RegularPages "Section" "minors") "Date" "desc") ".Params.draft" "!=" true) }}
+{{ with (index $latestPost 0) }}
+  <div class="latest-container">
+    <div class="latest-thumbnail">
+      {{ $coverImagePath := printf "/%simages/%s" .File.Dir .Params.Cover }}
+      <img src="{{ $coverImagePath }}" alt="" width="250" height="250">
+    </div>
+    <div class="latest-summary">
+      <p>{{ .Date | time.Format "2 Jan 2006" }}</p>
+      <h2>{{ .Title }}</h2>
+      <p>{{ strings.Substr .Summary 3 150 }}...</p>
+      <a class="mechanical-button" href="{{ .RelPermalink }}">Read more</a>
+    </div>
+  </div>
+{{ end }}
+
+<style media="screen">
+  .latest-container {
+    display: flex;
+    padding: 1em;
+    background-color: #eee;
+    border-radius: 1em;
+  }
+  .latest-summary {
+    margin: 0 1em;
+  }
+</style>

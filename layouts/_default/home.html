@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <main>
+    <header class="home-page-header">
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="home-page-content">
+      {{ .Content }}
+    </div>
+    <div>
+      <h2>Latest</h2>
+      {{ partial "latest-post" . }}
+    </div>
+    <div>
+      <h2>Majors</h2>
+      {{ partial "major-gallery" . }}
+    </div>
+    <div>
+      <h2>Minors</h2>
+      {{ partial "minor-gallery" . }}
+    </div>
+  </main>
+{{ end }}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <title>
+  In Orbit &ndash; Gergő&#39;s Phlog
+</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="content">
+      
+  <h1>In Orbit</h1>
+  <p>Content of second album.</p>
+
+  
+  <div class="slideshow-container">
+	
+
+	<div class="thumbnail-row">
+	  
+	</div>
+
+	<style>
+	 
+	.slideshow-container {
+	  position: relative;
+	  margin: auto;
+	  max-width: 100%;
+	}
+	.mySlides {
+	  display: none;
+	}
+	.mySlides img {
+	  vertical-align: middle;
+		margin: 0 auto;
+		max-width: 400px;
+		max-height: 400px;
+	}
+
+	 
+	.thumbnail-row {
+	  display: flex;
+	  justify-content: center;
+	  margin-top: 15px;
+	}
+	.thumbnail {
+	  cursor: pointer;
+	  margin: 5px;
+	  overflow: hidden;
+	  border: 2px solid transparent;
+	  transition: 0.3s;
+		opacity: 0.6;
+	}
+	.thumbnail:hover {
+	  border: 2px solid #ddd;
+	}
+	.thumbnail img {
+	  display: block;
+	}
+
+	 
+	.thumbnail.active {
+	  border: 2px solid #666;
+		opacity: 1;
+	}
+	</style>
+
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let thumbnails = document.getElementsByClassName("thumbnail");
+
+	  if (n > slides.length) { slideIndex = 1 }
+	  if (n < 1) { slideIndex = slides.length }
+
+	  
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+
+	  
+	  for (i = 0; i < thumbnails.length; i++) {
+	    thumbnails[i].classList.remove("active");
+	  }
+
+	  
+	  slides[slideIndex - 1].style.display = "flex";
+	  thumbnails[slideIndex - 1].classList.add("active");
+	}
+	</script>
+
+
+      
+  <a href="/">Back to Home</a>
+
+    </div>
+  </body>
+</html>

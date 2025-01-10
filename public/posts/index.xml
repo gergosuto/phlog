@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Gergő&#39;s Phlog</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on Gergő&#39;s Phlog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Jan 2025 20:19:24 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Roof of Amsterdam&#39;s central bus station</title>
+      <link>//localhost:1313/posts/4-adam-bus-roof/</link>
+      <pubDate>Thu, 09 Jan 2025 20:19:24 +0100</pubDate>
+      <guid>//localhost:1313/posts/4-adam-bus-roof/</guid>
+      <description>&lt;p&gt;The bus terminal of Amsterdam’s central station is elevated above ground. When coming up on an escalator, my attention is drawn to the terminal’s glass roof. It is covered with an alternating mix of wine-red and mustard coloured tiles. At first, the arrangement seems random, or abstract at best. Only after some observation – made possible by my delayed bus – do (flipped) letters start to take shape: M, A, D, R. While the rest of them disappear in the distance of the platform, I have lived long enough in the Netherlands to figure it out: when viewed from above, such as a landing airplane, the terminal’s roof displays A-M-S-T-E-R-D-A-M.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Luchtsingel, Rotterdam</title>
+      <link>//localhost:1313/posts/2-luchtsingel/</link>
+      <pubDate>Thu, 09 Jan 2025 19:10:12 +0100</pubDate>
+      <guid>//localhost:1313/posts/2-luchtsingel/</guid>
+      <description>&lt;p&gt;My takes during a walk on the one and only ‘yellow bridge’ of Rotterdam – on a serene and sunny early spring morning.&lt;/p&gt;&#xA;&lt;p&gt;For those who don’t know about this remarkable piece of public infrastructure, it’s essentially a octopus-like pedestrian high-way that connects three districts in the center of Rotterdam.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Remains of the 1956 Olympic ski jump ramp</title>
+      <link>//localhost:1313/posts/1-cortina/</link>
+      <pubDate>Thu, 09 Jan 2025 19:09:45 +0100</pubDate>
+      <guid>//localhost:1313/posts/1-cortina/</guid>
+      <description>&lt;p&gt;Situated in the Dolomites of Italy, Cortina d’Ampezzo hosted the 1956 Winter Olympics. When visiting the town in 2024, we discovered the old ramp used for ski jumping. While far from being an expert, I believe the ramp is not in use anymore. I particularly liked the twist of repurposing of the landing strip into a local football field.&lt;/p&gt;&#xA;&lt;p&gt;Two photographs, September 2024&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Third Post</title>
+      <link>//localhost:1313/posts/3-rdam-centraal/</link>
+      <pubDate>Tue, 09 Jan 2024 20:19:06 +0100</pubDate>
+      <guid>//localhost:1313/posts/3-rdam-centraal/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

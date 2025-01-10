@@ -1,0 +1,77 @@
+<div class="slideshow-container">
+  {{ range where .Site.RegularPages "Section" "majors" }}
+    <div class="slide">
+      <div class="slide-image">
+        {{ $coverImagePath := printf "/%simages/%s" .File.Dir .Params.Cover }}
+        <img src="{{ $coverImagePath }}">
+      </div>
+      <h2>{{ .Title }} ({{ .Date.Year }})</h2>
+      <div class="slide-nav">
+        <a class="mechanical-button prev" onclick="plusSlides(-1)">&larr;</a>
+        <a class="mechanical-button open" href="{{ .RelPermalink }}">Open</a>
+        <a class="mechanical-button next" onclick="plusSlides(1)">&rarr;</a>
+      </div>
+    </div>
+  {{ end }}
+</div>
+
+<style>
+/* Add CSS for slideshow */
+.slideshow-container {
+
+}
+.slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 645px;
+  margin: 0 auto;
+}
+.slide-image img {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.slide-image {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  height: 645px;
+  width: 100%;
+}
+.slide-nav {
+  display: flex;
+}
+.prev, .next {
+  cursor: pointer;
+  width: auto;
+  font-weight: bold;
+  user-select: none;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+</style>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "flex";
+}
+</script>
