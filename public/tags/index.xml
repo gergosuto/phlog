@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Gergő&#39;s Phlog</title>
-    <link>http://localhost:1313/phlog/tags/</link>
+    <link>https://gergosuto.github.io/phlog/tags/</link>
     <description>Recent content in Tags on Gergő&#39;s Phlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/phlog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gergosuto.github.io/phlog/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
