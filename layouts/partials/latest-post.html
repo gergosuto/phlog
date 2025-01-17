@@ -1,16 +1,18 @@
 {{ $latestPost := first 1 (where (sort (where .Site.RegularPages "Section" "minors") "Date" "desc") ".Params.draft" "!=" true) }}
 {{ with (index $latestPost 0) }}
-  <div class="latest-container section">
-    {{ $coverImagePath := printf "images/%s" .Params.Cover }}
-      {{ with .Resources.Get $coverImagePath }}
-        <div class="latest-thumbnail" style="background-image: url('{{ .RelPermalink }}');"></div>
-    {{ end }}
-    <div class="latest-summary">
-      <div class="grey-text small">LATEST | {{ .Date | time.Format "2 Jan 2006" }}</div>
-      <h2 class="latest-title">{{ .Title }}</h2>
-      <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
+  <a href="{{ .RelPermalink }}">
+    <div class="latest-container section">
+      {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+        {{ with .Resources.Get $coverImagePath }}
+          <div class="latest-thumbnail" style="background-image: url('{{ .RelPermalink }}');"></div>
+      {{ end }}
+      <div class="latest-summary">
+        <div class="grey-text small">LATEST | {{ .Date | time.Format "2 Jan 2006" }}</div>
+        <h2 class="latest-title">{{ .Title }}</h2>
+        <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
+      </div>
     </div>
-  </div>
+  </a>
 {{ end }}
 
 <style media="screen">

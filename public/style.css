@@ -7,6 +7,11 @@ body {
   background-color: #eee;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 .section {
   margin: 5em 0;
 }
