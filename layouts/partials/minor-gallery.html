@@ -1,13 +1,14 @@
-<div class="masonry-gallery">
+<div class="masonry-gallery section">
   {{ range where .Site.RegularPages "Section" "minors" }}
-    <div class="masonry-item">
-      <a href="{{ .RelPermalink }}">
+    <a class="polaroid-link" href="{{ .RelPermalink }}">
+      <div class="masonry-item">
         {{ $coverImagePath := printf "images/%s" .Params.Cover }}
         {{ with .Resources.Get $coverImagePath }}
           <img src="{{ .RelPermalink }}" alt="">
         {{ end }}
-      </a>
-    </div>
+      <p>{{ .Title }}</p>
+      </div>
+    </a>
   {{ end }}
 </div>
 
@@ -15,9 +16,14 @@
   .masonry-gallery {
     column-count: 3;
     column-gap: .5em;
+    margin: 0.5em;
   }
   .masonry-item {
-    padding-top: .5em;
+    padding: .7em;
+    margin-bottom: .5em;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    box-shadow: .05em .05em .3em .05em #ccc;
   }
   .masonry-item img {
     width: 100%;
@@ -25,5 +31,14 @@
   .masonry-item a {
     display: block;
     font-size: 0;
+  }
+  .polaroid-link {
+    text-decoration: none;
+    color: #000;
+  }
+  @media only screen and (max-width: 600px) {
+    .masonry-gallery {
+      column-count: 2;
+    }
   }
 </style>

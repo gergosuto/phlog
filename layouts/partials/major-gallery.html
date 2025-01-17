@@ -1,4 +1,4 @@
-<div class="slideshow-container">
+<div class="slideshow-container section">
   {{ range where .Site.RegularPages "Section" "majors" }}
     <div class="slide">
       <div class="slide-image">
@@ -9,9 +9,9 @@
       </div>
       <h2>{{ .Title }} ({{ .Date.Year }})</h2>
       <div class="slide-nav">
-        <a class="mechanical-button prev" onclick="plusSlides(-1)">&larr;</a>
-        <a class="mechanical-button open" href="{{ .RelPermalink }}">Open</a>
-        <a class="mechanical-button next" onclick="plusSlides(1)">&rarr;</a>
+        <div class="button grey-button prev"><a onclick="plusSlides(-1)"><</a></div>
+        <div class="button color-button"><a href="{{ .RelPermalink }}">Open</a></div>
+        <div class="button grey-button next"><a onclick="plusSlides(1)">></a></div>
       </div>
     </div>
   {{ end }}
@@ -29,30 +29,26 @@
   margin: 0 auto;
 }
 .slide-image {
-  display: flex;
+  box-sizing: border-box;
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 5/4;
+  padding: 0 2em;
+  overflow: hidden;
+  text-align: center;
 }
 .slide-image img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   margin: 0 auto;
+  padding: 2em;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  box-shadow: .1em .1em .3em .1em #ccc;
+  box-sizing: border-box;
 }
 .slide-nav {
   display: flex;
-}
-.prev, .next {
-  cursor: pointer;
-  width: auto;
-  font-weight: bold;
-  user-select: none;
-}
-.prev {
-  left: 0;
-}
-.next {
-  right: 0;
 }
 </style>
 

@@ -6,10 +6,26 @@
     <p>Gergő Sütő</p>
     <p>{{ .Date | time.Format "2 Jan 2006" }}</p>
   </div>
-  <h1>{{ .Title }}</h1>
+  <h1 class="center">{{ .Title }}</h1>
   {{ partial "slideshow" . }}
-  {{ .Content }}
+  <div class="post-text">
+    {{ .Content }}
+  </div>
 {{ end }}
 {{ define "footer" }}
-  <a class="mechanical-button" href="/phlog">Back to Home</a>
+  <footer class="center">
+    {{ with .NextInSection }}
+      <div class="button grey-button">
+        <a href="{{ .RelPermalink }}"><</a>
+      </div>
+    {{ end }}
+    <div class="button grey-button">
+      <a href="/phlog">Home</a>
+    </div>
+    {{ with .PrevInSection }}
+      <div class="button grey-button">
+        <a href="{{ .RelPermalink }}">></a>
+      </div>
+    {{ end }}
+  </footer>
 {{ end }}

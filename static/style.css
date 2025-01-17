@@ -1,5 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: monospace;
+  font-family: Ubuntu Mono;
+  background-color: #eee;
+}
+
+.section {
+  margin: 5em 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.grey-text {
+  color: #aaa;
+}
+
+.small {
+  font-size: 0.9em;
 }
 
 .content {
@@ -7,44 +28,98 @@ body {
   margin: 0 auto;
 }
 
-/* Basic styles for the button */
-.mechanical-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #979797;
-    color: white;
-    font-size: 1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 3px solid #595959;;
-    text-align: center;
-    transition: all 0.1s ease-in-out; /* Faster transition for a more immediate feel */
-    box-shadow: 0 5px #444;
-    cursor: pointer;
-    position: relative;
-    top: 0;
-  }
+.button {
+  position:relative;
+  display:inline-block;
+  margin: .5em;
+  user-select: none;
+  cursor: pointer;
+}
+.button a {
+  
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  display:block;
+  position:relative;
+  padding: .6em 1em;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 100px;
+}
 
-  .mechanical-button.open{
-    background-color: #d42323;
-    border-color: #992e2e;
-    box-shadow: 0 5px #700f0f;
-  }
+.button a:active {
+  top:5px;
+}
 
-  /* Hover and Active States (Pressed Effect) */
-  .mechanical-button:hover,
-  .mechanical-button:active {
-    box-shadow: 0 4px #444; /* Less shadow to make it look pressed down */
-    transform: translateY(2px); /* Push it down */
-  }
+.button:after {
+  content:"";
+  height:100%;
+  width:100%;
+  padding:3px;
+  position: absolute;
+  bottom:-10px;
+  left:-3px;
+  z-index:-1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 100px;
+}
 
-  .mechanical-button.open:hover,
-  .mechanical-button.open:active {
-    box-shadow: 0 4px #700f0f;
-    transform: translateY(2px);
-  }
+/* Color button */
 
-  .open {
-    margin: 0 5px;
-  }
+.color-button a {
+  color:#000;
+  background-color:#ffd341;
+
+  -webkit-box-shadow:inset 0 1px 0 #fff, 0 5px 0 #916100;
+  -moz-box-shadow:inset 0 1px 0 #fff, 0 5px 0 #916100;
+  box-shadow:inset 0 1px 0 #fff, 0 5px 0 #916100;
+}
+
+.color-button a:active {
+  background-color:#f0c639;
+  
+  -webkit-box-shadow:inset 0 1px 0 #fff, inset 0 -3px 0 #916100;
+  -moz-box-shadow:inset 0 1px 0 #fff, inset 0 -3px 0 #916100;
+  box-shadow:inset 0 1px 0 #fff, inset 0 -3px 0 #916100;
+}
+
+.color-button:after {
+  background-color:#222;
+}
+
+/* Grey button */
+.grey-button a {
+  color:#000;
+  background-color: #ddd;
+
+  -webkit-box-shadow:inset 0 1px 0 #fff, 0 5px 0 #666;
+  -moz-box-shadow:inset 0 1px 0 #fff, 0 5px 0 #666;
+  box-shadow:inset 0 1px 0 #fff, 0 5px 0 #666;
+}
+
+.grey-button a:active {
+  background-color:#ccc;
+  
+  -webkit-box-shadow:inset 0 1px 0 #fff, inset 0 -3px 0 #666;
+  -moz-box-shadow:inset 0 1px 0 #fff, inset 0 -3px 0 #666;
+  box-shadow:inset 0 1px 0 #fff, inset 0 -3px 0 #666;
+}
+
+.grey-button:after {
+  background-color:#222;
+}
+
+
+
+footer {
+  margin: 3em;
+}
+
+.post-text {
+  line-height: 1.4em;
+}

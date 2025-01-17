@@ -7,6 +7,7 @@
   A sculpture of Nike in sunset &ndash; Gergő&#39;s Phlog
 </title>
     <link rel="stylesheet" href="/phlog/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <div class="content">
@@ -15,106 +16,75 @@
     <p>Gergő Sütő</p>
     <p>9 Feb 2024</p>
   </div>
-  <h1>A sculpture of Nike in sunset</h1>
-  <div class="slideshow-container">
-	
-    <div class="mySlides fade">
-		  <img src="/phlog/minors/2024-02-09-nike-sculpture/images/1.jpeg">
-	  </div>
+  <h1 class="center">A sculpture of Nike in sunset</h1>
   
 
-	<div class="thumbnail-row">
-	  
-			
-		  <div class="thumbnail" onclick="currentSlide( 1 )">
-		    <img src="/phlog/minors/2024-02-09-nike-sculpture/images/1_hu11796155607660904807.jpeg">
-		  </div>
-	  
-	</div>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        
+        <div class="swiper-slide">
+            <img src="/phlog/minors/2024-02-09-nike-sculpture/images/1.jpeg">
+        </div>
+        
+    </div>
+</div>
 
-	<style>
-	 
-	.slideshow-container {
-	  position: relative;
-	  margin: auto;
-	  max-width: 100%;
-	}
-	.mySlides {
-	  display: none;
-	}
-	.mySlides img {
-	  vertical-align: middle;
-		margin: 0 auto;
-		max-width: 400px;
-		max-height: 400px;
-	}
+<style>
+    .swiper {
+        width: 75%;
+        aspect-ratio: 1/1;
+        margin: 3em auto;
+    }
 
-	 
-	.thumbnail-row {
-	  display: flex;
-	  justify-content: center;
-	  margin-top: 15px;
-	}
-	.thumbnail {
-	  cursor: pointer;
-	  margin: 5px;
-	  overflow: hidden;
-	  border: 2px solid transparent;
-	  transition: 0.3s;
-		opacity: 0.6;
-	}
-	.thumbnail:hover {
-	  border: 2px solid #ddd;
-	}
-	.thumbnail img {
-	  display: block;
-	}
+    .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
 
-	 
-	.thumbnail.active {
-	  border: 2px solid #666;
-		opacity: 1;
-	}
-	</style>
+    .swiper-slide img {
+        max-height: 100%;
+        max-width: 100%;
+        border: 1em white solid;
+    }
 
-	<script>
-	let slideIndex = 1;
-	showSlides(slideIndex);
+    .swiper-3d .swiper-slide-shadow {
+        background-color: rgba(0,0,0,0);
+    }
+</style>
 
-	
-	function currentSlide(n) {
-	  showSlides(slideIndex = n);
-	}
 
-	function showSlides(n) {
-	  let i;
-	  let slides = document.getElementsByClassName("mySlides");
-	  let thumbnails = document.getElementsByClassName("thumbnail");
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-	  if (n > slides.length) { slideIndex = 1 }
-	  if (n < 1) { slideIndex = slides.length }
 
-	  
-	  for (i = 0; i < slides.length; i++) {
-	    slides[i].style.display = "none";
-	  }
+<script>
+var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+});
+</script>
+  <div class="post-text">
+    <p>Nike was goddess of victory in ancient Greece. This sculpture of her was first erected in the Agora of Athens around 425 BC. Originally carved as winged on her back, a typical representation of Nike, she has lost her wings at some point over the millenia. In this photo, I attempted to create an illusion for this irreplacable loss using the light and shadows of the setting sun in Athens.</p>
 
-	  
-	  for (i = 0; i < thumbnails.length; i++) {
-	    thumbnails[i].classList.remove("active");
-	  }
-
-	  
-	  slides[slideIndex - 1].style.display = "flex";
-	  thumbnails[slideIndex - 1].classList.add("active");
-	}
-	</script>
-
-  <p>Nike was goddess of victory in ancient Greece. This sculpture of her was first erected in the Agora of Athens around 425 BC. Originally carved as winged on her back, a typical representation of Nike, she has lost her wings at some point over the millenia. In this photo, I attempted to create an illusion for this irreplacable loss using the light and shadows of the setting sun in Athens.</p>
-
+  </div>
 
       
-  <a class="mechanical-button" href="/phlog">Back to Home</a>
+  <footer class="center">
+    
+      <div class="button grey-button">
+        <a href="/phlog/minors/2024-03-09-luchtsingel/">&lt;</a>
+      </div>
+    
+    <div class="button grey-button">
+      <a href="/phlog">Home</a>
+    </div>
+    
+      <div class="button grey-button">
+        <a href="/phlog/minors/2024-02-08-parthenon/">></a>
+      </div>
+    
+  </footer>
 
     </div>
   </body>

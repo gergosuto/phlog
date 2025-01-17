@@ -1,17 +1,14 @@
 {{ $latestPost := first 1 (where (sort (where .Site.RegularPages "Section" "minors") "Date" "desc") ".Params.draft" "!=" true) }}
 {{ with (index $latestPost 0) }}
-  <div class="latest-container">
-    <div class="latest-thumbnail">
-      {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+  <div class="latest-container section">
+    {{ $coverImagePath := printf "images/%s" .Params.Cover }}
       {{ with .Resources.Get $coverImagePath }}
-        <img src="{{ .RelPermalink }}" alt="">
-      {{ end }}
-    </div>
+        <div class="latest-thumbnail" style="background-image: url('{{ .RelPermalink }}');"></div>
+    {{ end }}
     <div class="latest-summary">
-      <p>{{ .Date | time.Format "2 Jan 2006" }}</p>
-      <h2>{{ .Title }}</h2>
-      <p>{{ strings.Substr .Summary 3 150 }}...</p>
-      <a class="mechanical-button" href="{{ .RelPermalink }}">Read more</a>
+      <div class="grey-text small">LATEST | {{ .Date | time.Format "2 Jan 2006" }}</div>
+      <h2 class="latest-title">{{ .Title }}</h2>
+      <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
     </div>
   </div>
 {{ end }}
@@ -19,21 +16,31 @@
 <style media="screen">
   .latest-container {
     display: flex;
+    flex-direction: row;
     padding: 1em;
-    background-color: #eee;
-    border-radius: 1em;
+    border: 1px solid #bbb;
+    background-color: #fff;
+    box-shadow: .05em .05em .3em .05em #ccc;
   }
   .latest-thumbnail {
-    display: flex;
-    width: 100%;
+    width: 150px;
     aspect-ratio: 1/1;
-  }
-  .latest-thumbnail img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
   }
   .latest-summary {
     margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .latest-excerpt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1em;
+    max-height: 3em; /* Limiting to 2 lines */
+    -webkit-line-clamp: 3; /* Specify the number of lines */
+    -webkit-box-orient: vertical;
   }
 </style>
