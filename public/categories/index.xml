@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Gergő&#39;s Phlog</title>
-    <link>https://gergosuto.github.io/phlog/categories/</link>
+    <link>phlog.gergosuto.com/categories/</link>
     <description>Recent content in Categories on Gergő&#39;s Phlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://gergosuto.github.io/phlog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="phlog.gergosuto.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
