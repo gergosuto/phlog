@@ -2,18 +2,13 @@
   {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <div style="display: flex; justify-content: space-between; color: grey;">
-    <p>Gergő Sütő</p>
-    <p>{{ .Date | time.Format "2 Jan 2006" }}</p>
-  </div>
   <h1 class="center">{{ .Title }}</h1>
+  <p class="grey-text center">{{ .Date | time.Format "2 Jan 2006" }}</p>
   {{ partial "slideshow" . }}
   <div class="post-text">
     {{ .Content }}
   </div>
-{{ end }}
-{{ define "footer" }}
-  <footer class="center">
+  <div class="center">
     {{ with .NextInSection }}
       <div class="button grey-button">
         <a href="{{ .RelPermalink }}"><</a>
@@ -27,5 +22,15 @@
         <a href="{{ .RelPermalink }}">></a>
       </div>
     {{ end }}
-  </footer>
+  </div>
+{{ end }}
+
+{{ define "footer" }}
+  <div class="footer-container">
+    <div class="footer">
+      {{ $t := time.Now }}
+      <div>All rights reserved © {{ $t.Year }}</div>
+      <div><a href="https://gergosuto.com/">gergosuto.com</a></div>
+    </div>
+  </div>
 {{ end }}

@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
+    {{ partial "header" . }}
     <div class="content">
       {{ block "main" . }} {{ end }}
-      {{ block "footer" . }} {{ end }}
     </div>
+    {{ block "footer" . }} {{ end }}
   </body>
 </html>

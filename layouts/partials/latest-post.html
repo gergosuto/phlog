@@ -25,7 +25,7 @@
     box-shadow: .05em .05em .3em .05em #ccc;
   }
   .latest-thumbnail {
-    width: 150px;
+    width: 200px;
     aspect-ratio: 1/1;
     flex-shrink: 0;
     background-size: cover;
@@ -44,5 +44,10 @@
     max-height: 3em; /* Limiting to 2 lines */
     -webkit-line-clamp: 3; /* Specify the number of lines */
     -webkit-box-orient: vertical;
+  }
+  @media only screen and (max-width: 600px) {
+    .latest-thumbnail {
+      width: 150px;
+    }
   }
 </style>

@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
+    <div class="header-container">
+    <div class="header">
+      <div class="header-logo"><a href="/">Gergő's Phlog</a></div>
+      <div class="header-text">Photography portfolio & microblog.</div>
+    </div>
+</div>
     <div class="content">
       
   <main>
-    <header class="home-page-header">
-      <h1 class="center">Gergő&#39;s Phlog</h1>
-    </header>
-    <div class="home-page-content center">
-      <p>A photography portfolio and microblog by Gergő Sütő.</p>
-
-    </div>
     <div>
       
 
@@ -48,7 +47,7 @@
     box-shadow: .05em .05em .3em .05em #ccc;
   }
   .latest-thumbnail {
-    width: 150px;
+    width: 200px;
     aspect-ratio: 1/1;
     flex-shrink: 0;
     background-size: cover;
@@ -67,6 +66,11 @@
     max-height: 3em;  
     -webkit-line-clamp: 3;  
     -webkit-box-orient: vertical;
+  }
+  @media only screen and (max-width: 600px) {
+    .latest-thumbnail {
+      width: 150px;
+    }
   }
 </style>
 
@@ -230,7 +234,8 @@ function showSlides(n) {
   .masonry-gallery {
     column-count: 3;
     column-gap: .5em;
-    margin: 0.5em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
   }
   .masonry-item {
     padding: .7em;
@@ -260,10 +265,15 @@ function showSlides(n) {
     </div>
   </main>
 
-      
-  
-  <footer class="center grey-text section">2025 © all rights reserved</footer>
-
     </div>
+    
+  <div class="footer-container">
+    <div class="footer">
+      
+      <div>All rights reserved © 2025</div>
+      <div><a href="https://gergosuto.com/">gergosuto.com</a></div>
+    </div>
+  </div>
+
   </body>
 </html>

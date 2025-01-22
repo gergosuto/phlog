@@ -1,11 +1,5 @@
 {{ define "main" }}
   <main>
-    <header class="home-page-header">
-      <h1 class="center">{{ .Title }}</h1>
-    </header>
-    <div class="home-page-content center">
-      {{ .Content }}
-    </div>
     <div>
       {{ partial "latest-post" . }}
     </div>
@@ -19,6 +13,11 @@
 {{ end }}
 
 {{ define "footer" }}
-  {{ $t := time.Now }}
-  <footer class="center grey-text section">{{ $t.Year }} © all rights reserved</footer>
+  <div class="footer-container">
+    <div class="footer">
+      {{ $t := time.Now }}
+      <div>All rights reserved © {{ $t.Year }}</div>
+      <div><a href="https://gergosuto.com/">gergosuto.com</a></div>
+    </div>
+  </div>
 {{ end }}
