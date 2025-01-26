@@ -1,23 +1,23 @@
 {{ define "main" }}
   <main>
-    <div>
+    <div class="bg-grey">
       {{ partial "latest-post" . }}
     </div>
     <div>
-      {{ partial "major-gallery" . }}
+      <div class="content section">
+        <div class="section-header center">
+          <span class="bg-white">Majors</span>
+        </div>
+        {{ partial "major-gallery" . }}
+      </div>
     </div>
-    <div>
-      {{ partial "minor-gallery" . }}
+    <div class="bg-grey">
+      <div class="content section">
+        <div class="section-header center">
+          <span class="bg-grey">Minors</span>
+        </div>
+        {{ partial "minor-gallery" . }}
+      </div>
     </div>
   </main>
-{{ end }}
-
-{{ define "footer" }}
-  <div class="footer-container">
-    <div class="footer">
-      {{ $t := time.Now }}
-      <div>All rights reserved © {{ $t.Year }}</div>
-      <div><a href="https://gergosuto.com/">gergosuto.com</a></div>
-    </div>
-  </div>
 {{ end }}

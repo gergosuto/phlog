@@ -1,53 +1,80 @@
 {{ $latestPost := first 1 (where (sort (where .Site.RegularPages "Section" "minors") "Date" "desc") ".Params.draft" "!=" true) }}
 {{ with (index $latestPost 0) }}
-  <a href="{{ .RelPermalink }}">
-    <div class="latest-container section">
-      {{ $coverImagePath := printf "images/%s" .Params.Cover }}
-        {{ with .Resources.Get $coverImagePath }}
-          <div class="latest-thumbnail" style="background-image: url('{{ .RelPermalink }}');"></div>
-      {{ end }}
-      <div class="latest-summary">
-        <div class="grey-text small">LATEST | {{ .Date | time.Format "2 Jan 2006" }}</div>
-        <h2 class="latest-title">{{ .Title }}</h2>
-        <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
-      </div>
+  {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+  {{ with .Resources.Get $coverImagePath }}
+  <div class="latest-container" style="background-image: url('{{ .RelPermalink }}');">
+  {{ end }}
+    <div class="latest-summary">
+      <div class="latest-date">Latest · {{ .Date | time.Format "2 Jan 2006" }}</div>
+      <h2 class="latest-title">{{ .Title }}</h2>
+      <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
+      <div class="latest-button"><a href="{{ .RelPermalink}}">Open <span class="latest-button-icon">&#x1F86D;</span></a></div>
     </div>
-  </a>
+  </div>
 {{ end }}
 
 <style media="screen">
   .latest-container {
     display: flex;
-    flex-direction: row;
-    padding: 1em;
-    border: 1px solid #bbb;
-    background-color: #fff;
-    box-shadow: .05em .05em .3em .05em #ccc;
-  }
-  .latest-thumbnail {
-    width: 200px;
-    aspect-ratio: 1/1;
-    flex-shrink: 0;
+    align-items: end;
+
+    max-width: 645px;
+    height: 645px;
+    margin: 0 auto;
+
+    background-color: #eee;
     background-size: cover;
     background-position: center;
   }
-  .latest-summary {
-    margin: 0 1em;
-    display: flex;
-    flex-direction: column;
+
+  .latest-date {
+    font-size: .8em;
+    font-family: Noto Sans;
+    color: #ddd;
+    text-transform: uppercase;
   }
+
+  .latest-summary {
+    padding: 2.5em 1em;
+    width: 100%;
+
+    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.35) 15%, rgba(0,0,0,.9));
+  }
+
+  .latest-title {
+    font-family: Noto Serif Display;
+  }
+
   .latest-excerpt {
+    display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    line-height: 1em;
-    max-height: 3em; /* Limiting to 2 lines */
+    
+    font-size: .9em;
+    line-height: 1.5em;
+    max-height: 4.5em;
     -webkit-line-clamp: 3; /* Specify the number of lines */
     -webkit-box-orient: vertical;
+    font-family: Noto Sans;
   }
-  @media only screen and (max-width: 600px) {
-    .latest-thumbnail {
-      width: 150px;
-    }
+  .latest-button {
+    display: inline-block;
+    margin-top: 1em;
+  }
+  .latest-button a {
+    padding: .6em 1.2em;
+
+    color: #000;
+    background-color: #fff;
+    font-size: .9em;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+  .latest-button-icon {
+    font-family: 'Noto Sans Symbols 2';
+  }
+  .latest-button:hover {
+    background-color: #eee;
   }
 </style>

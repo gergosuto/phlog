@@ -1,72 +1,74 @@
-<div class="slideshow-container section">
-  {{ range where .Site.RegularPages "Section" "majors" }}
-    <div class="slide">
-      <div class="slide-image">
-        {{ $coverImagePath := printf "images/%s" .Params.Cover }}
-        {{ with .Resources.Get $coverImagePath }}
-          <img src="{{ .RelPermalink }}">
-        {{ end }}
+<div class="swiper HomeMajorSwiper">
+  <div class="swiper-wrapper">
+    {{ range where .Site.RegularPages "Section" "majors" }}
+      <div class="swiper-slide">
+        <a href="{{ .RelPermalink }}">
+          {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+          {{ with .Resources.Get $coverImagePath }}
+          <div class="swiper-slide-image" style="background-image: url('{{ .RelPermalink }}');"></div>
+          {{ end }}
+          <h3 class="swiper-slide-title">{{ .Title }} <span class="grey-text">({{ .Params.Albumdate }})</span></h3>
+        </a>
       </div>
-      <h2>{{ .Title }} ({{ .Date.Year }})</h2>
-      <div class="slide-nav">
-        <div class="button grey-button prev"><a onclick="plusSlides(-1)"><</a></div>
-        <div class="button color-button"><a href="{{ .RelPermalink }}">Open</a></div>
-        <div class="button grey-button next"><a onclick="plusSlides(1)">></a></div>
-      </div>
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-pagination"></div>
+
 </div>
 
 <style>
-/* Add CSS for slideshow */
-.slideshow-container {
+  :root {
+    --swiper-theme-color: #000;
+  }
 
-}
-.slide {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-}
-.slide-image {
-  box-sizing: border-box;
-  width: 100%;
-  aspect-ratio: 5/4;
-  padding: 0 2em;
-  overflow: hidden;
-  text-align: center;
-}
-.slide-image img {
-  height: 100%;
-  object-fit: contain;
-  margin: 0 auto;
-  padding: 2em;
-  border: 1px solid #bbb;
-  background-color: #fff;
-  box-shadow: .1em .1em .3em .1em #ccc;
-  box-sizing: border-box;
-}
-.slide-nav {
-  display: flex;
+  .swiper-slide a {
+    display: table;
+  }
+
+  .swiper-slide a:hover {
+    cursor: pointer;
+  }
+
+  .swiper-slide a:hover {
+    text-decoration: underline;
+  }
+
+  .swiper-slide-image {
+    height: 375px;
+    width: 300px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-slide-title {
+    height: 3em;
+    max-height: 3em;
+    overflow: hidden;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin-bottom: 3em;
+    font-weight: normal;
+    font-family: 'Noto Serif';
+    text-align: center;
+  }
 }
 </style>
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
+var swiper = new Swiper(".HomeMajorSwiper", {
+  slidesPerView: 1.2,
+  grabCursor: true,
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "flex";
-}
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
+});
 </script>
