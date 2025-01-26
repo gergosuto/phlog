@@ -2,13 +2,17 @@
   {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <h1 class="center">{{ .Title }}</h1>
-  {{ partial "slideshow" . }}
-  <div class="grey-text">Author notes</div>
-  {{ .Content }}
-  <div class="center">
-    <div class="button grey-button">
-      <a href="/">Back to Home</a>
+  <div class="bg-grey">
+    <div class="content section">
+      {{ partial "slideshow" . }}
+      <h1 class="center">{{ .Title }}</h1>
+      <div class="grey-text">Author notes</div>
+      {{ .Content }}
+      <div class="center">
+        <div class="button grey-button">
+          <a href="/">Back to Home</a>
+        </div>
+      </div>
     </div>
   </div>
 {{ end }}

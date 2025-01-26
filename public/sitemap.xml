@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>phlog.gergosuto.com/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2025-01-09T15:49:04+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/2024-11-24-holiday-funkies-2024/</loc>
+    <loc>//localhost:1313/minors/2024-11-24-holiday-funkies-2024/</loc>
     <lastmod>2024-11-24T20:19:06+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/</loc>
+    <loc>//localhost:1313/minors/</loc>
     <lastmod>2024-11-24T20:19:06+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/2024-09-06-cortina/</loc>
+    <loc>//localhost:1313/minors/2024-09-06-cortina/</loc>
     <lastmod>2024-09-06T19:09:45+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/2024-06-15-adam-roof/</loc>
+    <loc>//localhost:1313/minors/2024-06-15-adam-roof/</loc>
     <lastmod>2024-06-15T20:19:24+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/2024-03-09-luchtsingel/</loc>
+    <loc>//localhost:1313/minors/2024-03-09-luchtsingel/</loc>
     <lastmod>2024-03-09T19:10:12+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/2024-02-09-nike-sculpture/</loc>
+    <loc>//localhost:1313/minors/2024-02-09-nike-sculpture/</loc>
     <lastmod>2024-02-09T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/minors/2024-02-08-parthenon/</loc>
+    <loc>//localhost:1313/minors/2024-02-08-parthenon/</loc>
     <lastmod>2024-02-08T19:09:45+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/majors/in-orbit/</loc>
+    <loc>//localhost:1313/majors/in-orbit/</loc>
     <lastmod>2022-09-01T09:52:16+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/majors/</loc>
+    <loc>//localhost:1313/majors/</loc>
     <lastmod>2022-09-01T09:52:16+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/majors/what-do-you-see/</loc>
+    <loc>//localhost:1313/majors/what-do-you-see/</loc>
     <lastmod>2015-01-07T15:52:16+01:00</lastmod>
   </url><url>
-    <loc>phlog.gergosuto.com/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>phlog.gergosuto.com/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

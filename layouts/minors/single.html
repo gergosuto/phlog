@@ -2,25 +2,29 @@
   {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <h1 class="center">{{ .Title }}</h1>
-  <p class="grey-text center">{{ .Date | time.Format "2 Jan 2006" }}</p>
-  {{ partial "slideshow" . }}
-  <div class="post-text">
-    {{ .Content }}
-  </div>
-  <div class="center">
-    {{ with .NextInSection }}
-      <div class="button grey-button">
-        <a href="{{ .RelPermalink }}"><</a>
+  <div class="bg-grey">
+    <div class="content section">
+      <h1 class="center">{{ .Title }}</h1>
+      <p class="grey-text center">{{ .Date | time.Format "2 Jan 2006" }}</p>
+      {{ partial "slideshow" . }}
+      <div class="post-text">
+        {{ .Content }}
       </div>
-    {{ end }}
-    <div class="button grey-button">
-      <a href="/">Home</a>
+      <div class="center">
+        {{ with .NextInSection }}
+          <div class="button grey-button">
+            <a href="{{ .RelPermalink }}"><</a>
+          </div>
+        {{ end }}
+        <div class="button grey-button">
+          <a href="/">Home</a>
+        </div>
+        {{ with .PrevInSection }}
+          <div class="button grey-button">
+            <a href="{{ .RelPermalink }}">></a>
+          </div>
+        {{ end }}
+      </div>
     </div>
-    {{ with .PrevInSection }}
-      <div class="button grey-button">
-        <a href="{{ .RelPermalink }}">></a>
-      </div>
-    {{ end }}
   </div>
 {{ end }}
