@@ -21,17 +21,17 @@
     font-size: 0;
   }
   .masonry-item {
+    display: inline-block;
     position: relative;
     padding: .7rem;
-    margin-bottom: .5rem;
-    /* border: 1px solid #bbb; */
+    margin-top: .5rem;
     background-color: #fff;
     box-shadow: .05rem .05rem .3rem .05rem #ccc;
   }
   .masonry-item img {
     width: 100%;
   }
-  .masonry-item h2 {
+  .masonry-title {
     display: none;
     position: absolute;
     bottom: 0;
@@ -42,7 +42,7 @@
     font-size: .9rem;
     font-weight: normal;
   }
-  .masonry-item:hover h2 {
+  .masonry-item:hover .masonry-title {
       display: block;
   }
   .masonry-item:hover img {

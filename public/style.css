@@ -16,28 +16,28 @@ a {
   color: inherit;
 }
 .text_xs {
-  font-size: .8em;
+  font-size: .8rem;
 }
 .text_s {
-  font-size: .9em;
+  font-size: .9rem;
 }
 .text_m {
-  font-size: 1em;
+  font-size: 1rem;
 }
 .text_l {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 .text_xl {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 .uppercase {
   text-transform: uppercase;
 }
 .long_text {
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 .airy-text {
-  letter-spacing: .1em;
+  letter-spacing: .1rem;
 }
 .bold {
   font-weight: 800;
@@ -60,20 +60,15 @@ a {
 
 
 
-/* Gaps */
+/* Spacers */
 .spacer_s {
-  height: 1em;
+  height: 1rem;
 }
 .spacer_m {
-  height: 3em;
+  height: 3rem;
 }
 .spacer_l {
-  height: 5em;
-}
-
-
-.section {
-  padding: 5em 0;
+  height: 5rem;
 }
 
 .section-header {
@@ -244,12 +239,9 @@ a {
   justify-content: space-between;
   height: 3em;
   align-items: center;
-  text-transform: uppercase;
-  font-size: 0.8em;
 }
 .latest-button {
   display: inline-block;
-  margin-top: 1em;
 }
 .latest-button a {
   padding: .6em 1.2em;

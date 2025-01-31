@@ -5,36 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Gergő&#39;s Phlog </title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Mono">
+    
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans+Symbols+2&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto-Condensed">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Slab">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Serif">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Symbols+2">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <div class="header-container">
   <div class="header content">
-    <div class="header-logo text_xs">
+    <div class="header-logo text_s">
       <a class="hover_under" href="https://gergosuto.com/">Gergő Sütő</a> / <a class="hover_under" href="/"><b>Phlog</b></a>
     </div>
   </div>
 </div>
     
   <main>
-    <div class="bg-grey">
+    <div id="latest_post" class="bg-grey">
       
 
   
@@ -45,7 +37,8 @@
       <div class="latest-date">Latest post</div>
       <h2 class="latest-title">Holiday funkies 2024</h2>
       <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
-      <div class="latest-button text_xs">
+      <div class="spacer_s"></div>
+      <div class="latest-button text_s">
         <a href="phlog.gergosuto.com/minors/2024-11-24-holiday-funkies-2024/">Open <span class="symbol">&#x1F86D;</span></a>
       </div>
       <a class="text_xs uppercase text_link" style="margin-left: 1em;" href="#minor_gallery">See all</a>
@@ -102,7 +95,7 @@
 </style>
 
     </div>
-    <div>
+    <div id="major_gallery">
       <div class="content">
         <div class="spacer_l"></div>
         <blockquote class="long_text serif">
@@ -200,8 +193,8 @@ var swiper = new Swiper(".HomeMajorSwiper", {
         <div class="spacer_l"></div>
       </div>
     </div>
-    <div class="bg-grey">
-      <div class="content" id="minor_gallery">
+    <div id="minor_gallery" class="bg-grey">
+      <div class="content">
         <div class="spacer_l"></div>
         <div class="section-header center">
           <span class="bg-grey">All Posts</span>
@@ -279,17 +272,17 @@ var swiper = new Swiper(".HomeMajorSwiper", {
     font-size: 0;
   }
   .masonry-item {
+    display: inline-block;
     position: relative;
     padding: .7rem;
-    margin-bottom: .5rem;
-     
+    margin-top: .5rem;
     background-color: #fff;
     box-shadow: .05rem .05rem .3rem .05rem #ccc;
   }
   .masonry-item img {
     width: 100%;
   }
-  .masonry-item h2 {
+  .masonry-title {
     display: none;
     position: absolute;
     bottom: 0;
@@ -300,7 +293,7 @@ var swiper = new Swiper(".HomeMajorSwiper", {
     font-size: .9rem;
     font-weight: normal;
   }
-  .masonry-item:hover h2 {
+  .masonry-item:hover .masonry-title {
       display: block;
   }
   .masonry-item:hover img {
@@ -314,7 +307,7 @@ var swiper = new Swiper(".HomeMajorSwiper", {
   </main>
 
     <div class="footer-container">
-    <div class="footer content">
+    <div class="footer content text_xs uppercase">
       <div><a class="hover_under" href="/">Gergő's Phlog</a></div>
       
       <div>Copyright © 2025</div>
