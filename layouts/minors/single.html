@@ -3,28 +3,34 @@
 {{ end }}
 {{ define "main" }}
   <div class="bg-grey">
-    <div class="content section">
-      <h1 class="center">{{ .Title }}</h1>
-      <p class="grey-text center">{{ .Date | time.Format "2 Jan 2006" }}</p>
+    <div class="content">
+      <div class="spacer_m"></div>
       {{ partial "slideshow" . }}
-      <div class="post-text">
+      <div class="spacer_m"></div>
+      <h1 class="text_l caps">{{ .Title }}</h1>
+      <p class="grey-text uppercase text_xs">{{ .Date | time.Format "2 Jan 2006" }}</p>
+      <div class="long_text text_m serif">
         {{ .Content }}
+        <i>~Gergő</i>
       </div>
+      <br>
+      <br>
       <div class="center">
-        {{ with .NextInSection }}
-          <div class="button grey-button">
-            <a href="{{ .RelPermalink }}"><</a>
-          </div>
-        {{ end }}
-        <div class="button grey-button">
+        <div class="latest-button text_xs">
+          {{ with .NextInSection }}
+          <a href="{{ .RelPermalink }}"><span class="symbol">&#x1F868;</span> Next</a>
+          {{ end }}
+        </div>
+        <div class="latest-button text_xs">
           <a href="/">Home</a>
         </div>
-        {{ with .PrevInSection }}
-          <div class="button grey-button">
-            <a href="{{ .RelPermalink }}">></a>
-          </div>
-        {{ end }}
+        <div class="latest-button text_xs">
+          {{ with .PrevInSection }}
+          <a href="{{ .RelPermalink }}">Prev <span class="symbol">&#x1F86A;</span></a>
+          {{ end }}
+        </div>
       </div>
+      <div class="spacer_m"></div>
     </div>
   </div>
 {{ end }}

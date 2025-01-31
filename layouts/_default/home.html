@@ -4,19 +4,27 @@
       {{ partial "latest-post" . }}
     </div>
     <div>
-      <div class="content section">
-        <div class="section-header center">
-          <span class="bg-white">Majors</span>
+      <div class="content">
+        <div class="spacer_l"></div>
+        <blockquote class="long_text serif">
+          {{ .Content }}
+        </blockquote>
+        <div class="spacer_l"></div>
+        <div id="major-header" class="section-header center">
+          <span class="bg-white">Albums</span>
         </div>
         {{ partial "major-gallery" . }}
+        <div class="spacer_l"></div>
       </div>
     </div>
     <div class="bg-grey">
-      <div class="content section">
+      <div class="content" id="minor_gallery">
+        <div class="spacer_l"></div>
         <div class="section-header center">
-          <span class="bg-grey">Minors</span>
+          <span class="bg-grey">All Posts</span>
         </div>
         {{ partial "minor-gallery" . }}
+        <div class="spacer_l"></div>
       </div>
     </div>
   </main>

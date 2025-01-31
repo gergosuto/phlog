@@ -5,10 +5,13 @@
   <div class="latest-container" style="background-image: url('{{ .RelPermalink }}');">
   {{ end }}
     <div class="latest-summary">
-      <div class="latest-date">Latest · {{ .Date | time.Format "2 Jan 2006" }}</div>
+      <div class="latest-date">Latest post</div>
       <h2 class="latest-title">{{ .Title }}</h2>
       <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
-      <div class="latest-button"><a href="{{ .RelPermalink}}">Open <span class="latest-button-icon">&#x1F86D;</span></a></div>
+      <div class="latest-button text_xs">
+        <a href="{{ .RelPermalink}}">Open <span class="symbol">&#x1F86D;</span></a>
+      </div>
+      <a class="text_xs uppercase text_link" style="margin-left: 1em;" href="#minor_gallery">See all</a>
     </div>
   </div>
 {{ end }}
@@ -19,7 +22,8 @@
     align-items: end;
 
     max-width: 645px;
-    height: 600px;
+    height: calc(100vh - 2.5em);
+    min-height: 500px;
     margin: 0 auto;
 
     background-color: #eee;
@@ -57,24 +61,5 @@
     -webkit-line-clamp: 3; /* Specify the number of lines */
     -webkit-box-orient: vertical;
     font-family: Noto Sans;
-  }
-  .latest-button {
-    display: inline-block;
-    margin-top: 1em;
-  }
-  .latest-button a {
-    padding: .6em 1.2em;
-
-    color: #000;
-    background-color: #fff;
-    font-size: .9em;
-    line-height: 1em;
-    text-transform: uppercase;
-  }
-  .latest-button-icon {
-    font-family: 'Noto Sans Symbols 2';
-  }
-  .latest-button:hover {
-    background-color: #eee;
   }
 </style>

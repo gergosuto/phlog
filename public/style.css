@@ -1,16 +1,76 @@
+/* General layout */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Noto Sans, sans-serif;
   margin: 0;
 }
 
+/* Text */
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
 a {
   text-decoration: none;
   color: inherit;
 }
+.text_xs {
+  font-size: .8em;
+}
+.text_s {
+  font-size: .9em;
+}
+.text_m {
+  font-size: 1em;
+}
+.text_l {
+  font-size: 1.2em;
+}
+.text_xl {
+  font-size: 1.5em;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.long_text {
+  line-height: 1.5em;
+}
+.airy-text {
+  letter-spacing: .1em;
+}
+.bold {
+  font-weight: 800;
+}
+.serif {
+  font-family: 'Noto Serif';
+}
+.text_link {
+  text-decoration: underline;
+}
+.hover_under:hover {
+  text-decoration: underline;
+}
+.symbol {
+  font-family: 'Noto Sans Symbols 2';
+}
+.caps {
+  text-transform: capitalize;
+}
+
+
+
+/* Gaps */
+.spacer_s {
+  height: 1em;
+}
+.spacer_m {
+  height: 3em;
+}
+.spacer_l {
+  height: 5em;
+}
+
 
 .section {
   padding: 5em 0;
@@ -31,11 +91,10 @@ a {
   padding: 0 20px;
   z-index: 1;
   position: relative;
-  font-family: 'Noto Sans';
   letter-spacing: .1em;
 }
 
-.section-header::before {
+#major-header::before {
   content: '';
   border-bottom: 1px solid #bbb;
   width: 100%;
@@ -158,10 +217,6 @@ a {
   background-color:#222;
 }
 
-.post-text {
-  line-height: 1.4em;
-}
-
 .header-container {
   background-color: #fff;
   color: #000;
@@ -170,11 +225,9 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-  height: 3em;
+  height: 2.5em;
   align-items: center;
 
-  font-size: 0.9em;
-  font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -193,4 +246,19 @@ a {
   align-items: center;
   text-transform: uppercase;
   font-size: 0.8em;
+}
+.latest-button {
+  display: inline-block;
+  margin-top: 1em;
+}
+.latest-button a {
+  padding: .6em 1.2em;
+
+  color: #000;
+  background-color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.latest-button:hover {
+  background-color: #eee;
 }
