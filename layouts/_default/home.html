@@ -1,31 +1,103 @@
+{{ define "header" }}
+  {{ partial "header" . }}
+{{ end }}
 {{ define "main" }}
-  <main>
-    <div id="latest_post" class="bg-grey">
-      {{ partial "latest-post" . }}
+
+  <div class="slideshow_container">
+    {{ range where .Site.RegularPages "Section" "majors" }}
+    {{ $coverImagePath := printf "images/%s" .Params.Cover }}
+    {{ with .Resources.Get $coverImagePath }}
+    <div class="slide" style="background-image: url('{{ .RelPermalink }}');"></div>
+    {{ end }}
+    {{ end }}
+  </div>
+  <div class="slideshow_footer">
+    {{ range where .Site.RegularPages "Section" "majors" }}
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+    {{ end }}
+    <div class="slideshow_nav">
+      <div class="slideshow_left symbol" onclick="prevSlide()">&#x1F868;</div>
+      <div class="slideshow_right symbol" onclick="nextSlide()">&#x1F86A;</div>
     </div>
-    <div id="major_gallery">
-      <div class="content">
-        <div class="spacer_l"></div>
-        <blockquote class="long_text serif">
-          {{ .Content }}
-        </blockquote>
-        <div class="spacer_l"></div>
-        <div id="major-header" class="section-header center">
-          <span class="bg-white">Albums</span>
-        </div>
-        {{ partial "major-gallery" . }}
-        <div class="spacer_l"></div>
-      </div>
-    </div>
-    <div id="minor_gallery" class="bg-grey">
-      <div class="content">
-        <div class="spacer_l"></div>
-        <div class="section-header center">
-          <span class="bg-grey">All Posts</span>
-        </div>
-        {{ partial "minor-gallery" . }}
-        <div class="spacer_l"></div>
-      </div>
-    </div>
-  </main>
+  </div>
+
+	<style>
+	.slideshow_container {
+	  height: calc(100vh - 8rem);
+    /* max-width: 600px; */
+    margin: 1rem;
+	}
+  .slide {
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .slideshow_footer {
+    display: flex;
+    height: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
+  .slideshow_left {
+    float: left;
+    margin-right: .7rem;
+    cursor: pointer;
+    line-height: 1rem;
+  }
+  .slideshow_right {
+    float: right;
+    cursor: pointer;
+    line-height: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .slideshow_right {
+      margin-right: 1rem;
+    }
+    .slide_title {
+      margin: 0 1rem;
+    }
+  }
+
+	</style>
+
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+  function nextSlide() {
+    slideIndex++;
+    showSlides(slideIndex);
+  }
+
+  function prevSlide() {
+    slideIndex--;
+    showSlides(slideIndex);
+  }
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("slide");
+	  let titles = document.getElementsByClassName("slide_title");
+
+	  if (n > slides.length) { slideIndex = 1 }
+	  if (n < 1) { slideIndex = slides.length }
+
+	  // Hide all slides
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	    titles[i].style.display = "none";
+	  }
+
+	  // Show the selected slide and highlight the corresponding thumbnail
+	  slides[slideIndex - 1].style.display = "flex";
+	  titles[slideIndex - 1].style.display = "block";
+	}
+	</script>
 {{ end }}
