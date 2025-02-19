@@ -17,301 +17,128 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
-    <div class="header-container">
-  <div class="header content">
-    <div class="header-logo text_s">
-      <a class="hover_under" href="https://gergosuto.com/">Gergő Sütő</a> / <a class="hover_under" href="/"><b>Phlog</b></a>
-    </div>
-  </div>
-</div>
     
-  <main>
-    <div id="latest_post" class="bg-grey">
-      
 
-  
-  
-  <div class="latest-container" style="background-image: url('phlog.gergosuto.com/minors/2024-11-24-holiday-funkies-2024/images/7.jpeg');">
-  
-    <div class="latest-summary">
-      <div class="latest-date">Latest post</div>
-      <h2 class="latest-title">Holiday funkies 2024</h2>
-      <p class="latest-excerpt">No special description this time: random street-style photos from a recent holiday in Italy.</p>
-      <div class="spacer_s"></div>
-      <div class="latest-button text_s">
-        <a href="phlog.gergosuto.com/minors/2024-11-24-holiday-funkies-2024/">Open <span class="symbol">&#x1F86D;</span></a>
-      </div>
-      <a class="text_xs uppercase text_link" style="margin-left: 1em;" href="#minor_gallery">See all</a>
+  <div class="slideshow_container">
+    
+    
+    
+    <div class="slide" style="background-image: url('phlog.gergosuto.com/majors/rail-world/images/6.jpeg');"></div>
+    
+    
+    
+    
+    <div class="slide" style="background-image: url('phlog.gergosuto.com/majors/in-orbit/images/1.jpeg');"></div>
+    
+    
+    
+    
+    <div class="slide" style="background-image: url('phlog.gergosuto.com/majors/what-do-you-see/images/1.jpeg');"></div>
+    
+    
+  </div>
+  <div class="slideshow_footer">
+    
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="phlog.gergosuto.com/majors/rail-world/">Rail World</a></div>
+    
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="phlog.gergosuto.com/majors/in-orbit/">In Orbit</a></div>
+    
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="phlog.gergosuto.com/majors/what-do-you-see/">What Do You See</a></div>
+    
+    <div class="slideshow_nav">
+      <div class="slideshow_left symbol" onclick="prevSlide()">&#x1F868;</div>
+      <div class="slideshow_right symbol" onclick="nextSlide()">&#x1F86A;</div>
     </div>
   </div>
 
-
-<style media="screen">
-  .latest-container {
-    display: flex;
-    align-items: end;
-
-    max-width: 645px;
-    height: calc(100vh - 2.5em);
-    min-height: 500px;
-    margin: 0 auto;
-
-    background-color: #eee;
-    background-size: cover;
+	<style>
+	.slideshow_container {
+	  height: calc(100vh - 8rem);
+     
+    margin: 1rem;
+	}
+  .slide {
+    height: 100%;
     background-position: center;
-  }
-
-  .latest-date {
-    font-size: .8em;
-    font-family: Noto Sans;
-    color: #ddd;
-    text-transform: uppercase;
-  }
-
-  .latest-summary {
-    padding: 2.5em 1em;
-    width: 100%;
-
-    color: #fff;
-    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.35) 15%, rgba(0,0,0,.9));
-  }
-
-  .latest-title {
-    font-family: Noto Serif;
-  }
-
-  .latest-excerpt {
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-    font-size: .9em;
-    line-height: 1.5em;
-    max-height: 4.5em;
-    -webkit-line-clamp: 3;  
-    -webkit-box-orient: vertical;
-    font-family: Noto Sans;
-  }
-</style>
-
-    </div>
-    <div id="major_gallery">
-      <div class="content">
-        <div class="spacer_l"></div>
-        <blockquote class="long_text serif">
-          <p>I use photography as a tool for self-expression and for making sense of the world. Like many street and documentary photographers before me, I am sensitive to the human experience. As such, my photos are about the (often seemingly mundane) intricacies that I come across in my surroundings and the places I visit. I combine color with black-and-white images and often abstract my subjects. All my photos are candid. Importantly, the experience of moving countries as a young adult had a lasting influence on me – this is frequently reflected in my images. <em>Gergő&rsquo;s Phlog</em> is the corner of the internet where I publish my photos.</p>
-
-        </blockquote>
-        <div class="spacer_l"></div>
-        <div id="major-header" class="section-header center">
-          <span class="bg-white">Albums</span>
-        </div>
-        <div class="swiper HomeMajorSwiper">
-  <div class="swiper-wrapper">
-    
-      <div class="swiper-slide">
-        <a href="phlog.gergosuto.com/majors/in-orbit/">
-          
-          
-          <div class="swiper-slide-image" style="background-image: url('phlog.gergosuto.com/majors/in-orbit/images/1.jpeg');"></div>
-          
-          <h3 class="swiper-slide-title">In Orbit <span class="grey-text">(2022)</span></h3>
-        </a>
-      </div>
-    
-      <div class="swiper-slide">
-        <a href="phlog.gergosuto.com/majors/what-do-you-see/">
-          
-          
-          <div class="swiper-slide-image" style="background-image: url('phlog.gergosuto.com/majors/what-do-you-see/images/8.jpeg');"></div>
-          
-          <h3 class="swiper-slide-title">What Do You See <span class="grey-text">(2015)</span></h3>
-        </a>
-      </div>
-    
-  </div>
-
-  
-  <div class="swiper-pagination"></div>
-
-</div>
-
-<style>
-  :root {
-    --swiper-theme-color: #000;
-  }
-
-  .swiper-slide a {
-    display: table;
-  }
-
-  .swiper-slide a:hover {
-    cursor: pointer;
-  }
-
-  .swiper-slide a:hover {
-    text-decoration: underline;
-  }
-
-  .swiper-slide-image {
-    height: 375px;
-    width: 300px;
-    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  .slideshow_footer {
+    display: flex;
+    height: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
+  .slideshow_left {
+    float: left;
+    margin-right: .7rem;
+    cursor: pointer;
+    line-height: 1rem;
+  }
+  .slideshow_right {
+    float: right;
+    cursor: pointer;
+    line-height: 1rem;
   }
 
-  .swiper-slide-title {
-    height: 3em;
-    max-height: 3em;
-    overflow: hidden;
-    font-size: 1.1em;
-    line-height: 1.5em;
-    margin-bottom: 3em;
-    font-weight: normal;
-    font-family: 'Noto Serif';
-    text-align: center;
+  @media (max-width: 600px) {
+    .slideshow_right {
+      margin-right: 1rem;
+    }
+    .slide_title {
+      margin: 0 1rem;
+    }
   }
 
-</style>
+	</style>
 
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  function nextSlide() {
+    slideIndex++;
+    showSlides(slideIndex);
+  }
 
+  function prevSlide() {
+    slideIndex--;
+    showSlides(slideIndex);
+  }
 
-<script>
-var swiper = new Swiper(".HomeMajorSwiper", {
-  slidesPerView: 1.2,
-  grabCursor: true,
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("slide");
+	  let titles = document.getElementsByClassName("slide_title");
 
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-  },
-});
-</script>
-        <div class="spacer_l"></div>
-      </div>
+	  if (n > slides.length) { slideIndex = 1 }
+	  if (n < 1) { slideIndex = slides.length }
+
+	  
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	    titles[i].style.display = "none";
+	  }
+
+	  
+	  slides[slideIndex - 1].style.display = "flex";
+	  titles[slideIndex - 1].style.display = "block";
+	}
+	</script>
+
+    
+  <div class="header-container content">
+  <div class="header">
+    <div class="header-logo text_xs uppercase">
+      <a class="hover_under" href="https://gergosuto.com/">Gergő Sütő</a>
     </div>
-    <div id="minor_gallery" class="bg-grey">
-      <div class="content">
-        <div class="spacer_l"></div>
-        <div class="section-header center">
-          <span class="bg-grey">All Posts</span>
-        </div>
-        <div class="masonry-gallery">
-  
-    <a class="polaroid-link" href="phlog.gergosuto.com/minors/2024-11-24-holiday-funkies-2024/">
-      <div class="masonry-item">
-        
-        
-          <img src="phlog.gergosuto.com/minors/2024-11-24-holiday-funkies-2024/images/7.jpeg" alt="">
-        
-        <h2 class="masonry-title">Holiday funkies 2024 <span class="symbol">&#x1F86D;</span></h2>
-      </div>
-    </a>
-  
-    <a class="polaroid-link" href="phlog.gergosuto.com/minors/2024-09-06-cortina/">
-      <div class="masonry-item">
-        
-        
-          <img src="phlog.gergosuto.com/minors/2024-09-06-cortina/images/1.jpeg" alt="">
-        
-        <h2 class="masonry-title">Remains of the 1956 Olympic ski jump ramp <span class="symbol">&#x1F86D;</span></h2>
-      </div>
-    </a>
-  
-    <a class="polaroid-link" href="phlog.gergosuto.com/minors/2024-06-15-adam-roof/">
-      <div class="masonry-item">
-        
-        
-          <img src="phlog.gergosuto.com/minors/2024-06-15-adam-roof/images/1.jpeg" alt="">
-        
-        <h2 class="masonry-title">Roof of Amsterdam&#39;s central bus station <span class="symbol">&#x1F86D;</span></h2>
-      </div>
-    </a>
-  
-    <a class="polaroid-link" href="phlog.gergosuto.com/minors/2024-03-09-luchtsingel/">
-      <div class="masonry-item">
-        
-        
-          <img src="phlog.gergosuto.com/minors/2024-03-09-luchtsingel/images/3.jpeg" alt="">
-        
-        <h2 class="masonry-title">Luchtsingel, Rotterdam <span class="symbol">&#x1F86D;</span></h2>
-      </div>
-    </a>
-  
-    <a class="polaroid-link" href="phlog.gergosuto.com/minors/2024-02-09-nike-sculpture/">
-      <div class="masonry-item">
-        
-        
-          <img src="phlog.gergosuto.com/minors/2024-02-09-nike-sculpture/images/1.jpeg" alt="">
-        
-        <h2 class="masonry-title">A sculpture of Nike in sunset <span class="symbol">&#x1F86D;</span></h2>
-      </div>
-    </a>
-  
-    <a class="polaroid-link" href="phlog.gergosuto.com/minors/2024-02-08-parthenon/">
-      <div class="masonry-item">
-        
-        
-          <img src="phlog.gergosuto.com/minors/2024-02-08-parthenon/images/1.jpeg" alt="">
-        
-        <h2 class="masonry-title">The Parthenon in three frames <span class="symbol">&#x1F86D;</span></h2>
-      </div>
-    </a>
-  
+  </div>
 </div>
 
-<style media="screen">
-  .masonry-gallery {
-    column-count: 2;
-    column-gap: .5em;
-  }
-  .polaroid-link {
-    font-size: 0;
-  }
-  .masonry-item {
-    display: inline-block;
-    position: relative;
-    padding: .7rem;
-    margin-top: .5rem;
-    background-color: #fff;
-    box-shadow: .05rem .05rem .3rem .05rem #ccc;
-  }
-  .masonry-item img {
-    width: 100%;
-  }
-  .masonry-title {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: .7rem;
-    padding: .7rem;
-    box-sizing: content-box;
-    font-size: .9rem;
-    font-weight: normal;
-  }
-  .masonry-item:hover .masonry-title {
-      display: block;
-  }
-  .masonry-item:hover img {
-    opacity: .25;
-  }
-</style>
-
-        <div class="spacer_l"></div>
-      </div>
-    </div>
-  </main>
-
-    <div class="footer-container">
-    <div class="footer content text_xs uppercase">
-      <div><a class="hover_under" href="/">Gergő's Phlog</a></div>
-      
-      <div>Copyright © 2025</div>
-    </div>
-</div>
   </body>
 </html>

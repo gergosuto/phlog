@@ -9,7 +9,7 @@ body {
 
 /* Text */
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Ubuntu', 'Noto Sans', sans-serif;
 }
 a {
   text-decoration: none;
@@ -119,11 +119,8 @@ a {
 }
 
 .content {
-  max-width: 645px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .button {
@@ -213,15 +210,13 @@ a {
 }
 
 .header-container {
-  background-color: #fff;
   color: #000;
-  border-bottom: 1px solid #000;
 }
 .header {
   display: flex;
-  justify-content: space-between;
   height: 2.5em;
   align-items: center;
+  justify-content: end;
 
   font-optical-sizing: auto;
   font-style: normal;
@@ -229,28 +224,11 @@ a {
 
   text-transform: uppercase;
 }
-.footer-container {
-  background-color: #fff;
-  color: #000;
-  border-top: 1px solid #000;
-}
-.footer {
-  display: flex;
-  justify-content: space-between;
-  height: 3em;
-  align-items: center;
-}
-.latest-button {
-  display: inline-block;
-}
-.latest-button a {
-  padding: .6em 1.2em;
 
-  color: #000;
-  background-color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.latest-button:hover {
-  background-color: #eee;
+
+@media (max-width: 600px) {
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

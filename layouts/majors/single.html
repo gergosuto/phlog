@@ -2,21 +2,97 @@
   {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <div class="bg-grey">
-    <div class="content">
-      <div class="spacer_m"></div>
-      {{ partial "slideshow" . }}
-      <div class="spacer_m"></div>
-      <h1 class="center">{{ .Title }}</h1>
-      <div class="grey-text">Author notes</div>
-      {{ .Content }}
-      <div class="spacer_s"></div>
-      <div class="center">
-        <div class="latest-button text_xs">
-          <a href="/">Home</a>
+  <div class="lightbox">
+    <header>
+      <!-- <div class="thumbnails_icon">T</div> -->
+      <div class="close_icon"><a href="/">&times</a></div>
+    </header>
+    <main class="swiper LightboxSwiper">
+      <div class="swiper-wrapper">
+        {{ range .Resources.Match "images/*.jpeg" }}
+        <div class="swiper-slide slide-container">
+          <div class="slide-image" style="background-image: url('{{ .RelPermalink }}');"></div>
         </div>
+        {{ end }}
       </div>
-      <div class="spacer_m"></div>
-    </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination text_xs"></div>
+    </main>
+    <footer>
+      <div class="album_title text_s">{{ .Title }} ({{ .Params.Albumdate }})</div>
+      <div class="counter"></div>
+    </footer>
   </div>
+  
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #aaa;
+    }
+    .lightbox header {
+      display: flex;
+      height: 3rem;
+      align-items: center;
+      justify-content: end;
+    }
+    .lightbox footer {
+      display: flex;
+      height: 3rem;
+      align-items: center;
+    }
+    .lightbox header div, .lightbox footer div {
+      margin: 1rem;
+    }
+    .close_icon {
+      font-size: 2rem;
+    }
+    .album_title {
+      /* font-family: 'Noto Serif'; */
+    }
+
+    /* Swiper */
+    .swiper {
+      height: calc(100vh - 6rem);
+      max-width: 100%;
+    }
+    .swiper:hover {
+      cursor: ew-resize;
+    }
+    .slide-container {
+      padding: 1rem 2rem;
+    }
+    .slide-image {
+      height: 100%;
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .swiper-pagination {
+      width: 8ch;
+      position: fixed;
+      right: 0;
+      left: auto;
+      bottom: 0;
+      margin: 1.1rem 1rem; /* (2.5 - .8) / 2 = .85 rem */
+      text-align: right;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      keyboard: {
+        enabled: true,
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+    });
+  </script>
 {{ end }}
