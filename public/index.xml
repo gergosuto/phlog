@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gergő&#39;s Phlog</title>
-    <link>phlog.gergosuto.com/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Gergő&#39;s Phlog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2025 18:52:16 +0100</lastBuildDate>
-    <atom:link href="phlog.gergosuto.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interior Design in Ágnes Utca</title>
+      <link>//localhost:1313/majors/agnes-utca/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0100</pubDate>
+      <guid>//localhost:1313/majors/agnes-utca/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Rail World</title>
-      <link>phlog.gergosuto.com/majors/rail-world/</link>
-      <pubDate>Wed, 19 Feb 2025 18:52:16 +0100</pubDate>
-      <guid>phlog.gergosuto.com/majors/rail-world/</guid>
+      <link>//localhost:1313/majors/rail-world/</link>
+      <pubDate>Wed, 19 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>//localhost:1313/majors/rail-world/</guid>
       <description></description>
     </item>
     <item>
       <title>In Orbit</title>
-      <link>phlog.gergosuto.com/majors/in-orbit/</link>
-      <pubDate>Thu, 01 Sep 2022 09:52:16 +0100</pubDate>
-      <guid>phlog.gergosuto.com/majors/in-orbit/</guid>
+      <link>//localhost:1313/majors/in-orbit/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0100</pubDate>
+      <guid>//localhost:1313/majors/in-orbit/</guid>
       <description></description>
     </item>
     <item>
       <title>What Do You See</title>
-      <link>phlog.gergosuto.com/majors/what-do-you-see/</link>
-      <pubDate>Wed, 07 Jan 2015 15:52:16 +0100</pubDate>
-      <guid>phlog.gergosuto.com/majors/what-do-you-see/</guid>
+      <link>//localhost:1313/majors/what-do-you-see/</link>
+      <pubDate>Wed, 07 Jan 2015 00:00:00 +0100</pubDate>
+      <guid>//localhost:1313/majors/what-do-you-see/</guid>
       <description></description>
     </item>
   </channel>

@@ -22,64 +22,67 @@
   </div>
 
 	<style>
-	.slideshow_container {
-	  height: calc(100vh - 8rem);
-    /* max-width: 600px; */
-    margin: 1rem;
-	}
-  .slide {
-    height: 100%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
-  .slideshow_footer {
-    display: flex;
-    height: 2.5rem;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-  }
-  .slideshow_left {
-    float: left;
-    margin-right: .7rem;
-    cursor: pointer;
-    line-height: 1rem;
-  }
-  .slideshow_right {
-    float: right;
-    cursor: pointer;
-    line-height: 1rem;
-  }
+		body {
+			background-color: #ddd;
+		}
+		.slideshow_container {
+			height: calc(100vh - 8rem);
+			/* max-width: 600px; */
+    		margin: 1rem;
+		}
+	  	.slide {
+			height: 100%;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+	  	}
+		.slideshow_footer {
+			display: flex;
+			height: 2.5rem;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 600px;
+			margin: 0 auto;
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+		}
+		.slideshow_left {
+			float: left;
+			margin-right: .7rem;
+			cursor: pointer;
+			line-height: 1rem;
+		}
+		.slideshow_right {
+			float: right;
+			cursor: pointer;
+			line-height: 1rem;
+		}
 
-  @media (max-width: 600px) {
-    .slideshow_right {
-      margin-right: 1rem;
-    }
-    .slide_title {
-      margin: 0 1rem;
-    }
-  }
+		@media (max-width: 600px) {
+			.slideshow_right {
+				margin-right: 1rem;
+			}
+			.slide_title {
+				margin: 0 1rem;
+			}
+		}
 
 	</style>
 
 	<script>
 	let slideIndex = 1;
 	showSlides(slideIndex);
+	
+	function nextSlide() {
+	    slideIndex++;
+	    showSlides(slideIndex);
+	}
 
-  function nextSlide() {
-    slideIndex++;
-    showSlides(slideIndex);
-  }
-
-  function prevSlide() {
-    slideIndex--;
-    showSlides(slideIndex);
-  }
+	function prevSlide() {
+		slideIndex--;
+		showSlides(slideIndex);
+	}
 
 	function showSlides(n) {
 	  let i;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.140.2">
+	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Gergő&#39;s Phlog </title>
@@ -23,27 +23,34 @@
     
     
     
-    <div class="slide" style="background-image: url('phlog.gergosuto.com/majors/rail-world/images/6.jpeg');"></div>
+    <div class="slide" style="background-image: url('/majors/agnes-utca/images/a.jpeg');"></div>
     
     
     
     
-    <div class="slide" style="background-image: url('phlog.gergosuto.com/majors/in-orbit/images/1.jpeg');"></div>
+    <div class="slide" style="background-image: url('/majors/rail-world/images/6.jpeg');"></div>
     
     
     
     
-    <div class="slide" style="background-image: url('phlog.gergosuto.com/majors/what-do-you-see/images/1.jpeg');"></div>
+    <div class="slide" style="background-image: url('/majors/in-orbit/images/1.jpeg');"></div>
+    
+    
+    
+    
+    <div class="slide" style="background-image: url('/majors/what-do-you-see/images/1.jpeg');"></div>
     
     
   </div>
   <div class="slideshow_footer">
     
-    <div class="slide_title text_xs uppercase bold hover_under"><a href="phlog.gergosuto.com/majors/rail-world/">Rail World</a></div>
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="//localhost:1313/majors/agnes-utca/">Interior Design in Ágnes Utca</a></div>
     
-    <div class="slide_title text_xs uppercase bold hover_under"><a href="phlog.gergosuto.com/majors/in-orbit/">In Orbit</a></div>
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="//localhost:1313/majors/rail-world/">Rail World</a></div>
     
-    <div class="slide_title text_xs uppercase bold hover_under"><a href="phlog.gergosuto.com/majors/what-do-you-see/">What Do You See</a></div>
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="//localhost:1313/majors/in-orbit/">In Orbit</a></div>
+    
+    <div class="slide_title text_xs uppercase bold hover_under"><a href="//localhost:1313/majors/what-do-you-see/">What Do You See</a></div>
     
     <div class="slideshow_nav">
       <div class="slideshow_left symbol" onclick="prevSlide()">&#x1F868;</div>
@@ -52,64 +59,67 @@
   </div>
 
 	<style>
-	.slideshow_container {
-	  height: calc(100vh - 8rem);
-     
-    margin: 1rem;
-	}
-  .slide {
-    height: 100%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
-  .slideshow_footer {
-    display: flex;
-    height: 2.5rem;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 600px;
-    margin: 0 auto;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-  }
-  .slideshow_left {
-    float: left;
-    margin-right: .7rem;
-    cursor: pointer;
-    line-height: 1rem;
-  }
-  .slideshow_right {
-    float: right;
-    cursor: pointer;
-    line-height: 1rem;
-  }
+		body {
+			background-color: #ddd;
+		}
+		.slideshow_container {
+			height: calc(100vh - 8rem);
+			 
+    		margin: 1rem;
+		}
+	  	.slide {
+			height: 100%;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: bottom;
+	  	}
+		.slideshow_footer {
+			display: flex;
+			height: 2.5rem;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 600px;
+			margin: 0 auto;
+			border-top: 1px solid;
+			border-bottom: 1px solid;
+		}
+		.slideshow_left {
+			float: left;
+			margin-right: .7rem;
+			cursor: pointer;
+			line-height: 1rem;
+		}
+		.slideshow_right {
+			float: right;
+			cursor: pointer;
+			line-height: 1rem;
+		}
 
-  @media (max-width: 600px) {
-    .slideshow_right {
-      margin-right: 1rem;
-    }
-    .slide_title {
-      margin: 0 1rem;
-    }
-  }
+		@media (max-width: 600px) {
+			.slideshow_right {
+				margin-right: 1rem;
+			}
+			.slide_title {
+				margin: 0 1rem;
+			}
+		}
 
 	</style>
 
 	<script>
 	let slideIndex = 1;
 	showSlides(slideIndex);
+	
+	function nextSlide() {
+	    slideIndex++;
+	    showSlides(slideIndex);
+	}
 
-  function nextSlide() {
-    slideIndex++;
-    showSlides(slideIndex);
-  }
-
-  function prevSlide() {
-    slideIndex--;
-    showSlides(slideIndex);
-  }
+	function prevSlide() {
+		slideIndex--;
+		showSlides(slideIndex);
+	}
 
 	function showSlides(n) {
 	  let i;

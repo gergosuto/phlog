@@ -15,7 +15,6 @@
         </div>
         {{ end }}
       </div>
-      <!-- If we need pagination -->
       <div class="swiper-pagination text_xs"></div>
     </main>
     <footer>
@@ -86,6 +85,11 @@
       // Optional parameters
       keyboard: {
         enabled: true,
+      },
+
+      mousewheel: {
+        enabled: true,
+        forceToAxis: true,
       },
 
       // If we need pagination
